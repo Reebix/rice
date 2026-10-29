@@ -45,10 +45,10 @@ def toggle():
     state = get_state()
 
     if state == "full":
-        run_cmd(["sudo", "fan-mode", "-a"])
+        run_cmd(["sudo", "asus-fan-control-ec", "set", "-1"])
         set_state("auto")
     else:
-        run_cmd(["sudo", "fan-mode", "-f"])
+        run_cmd(["sudo", "asus-fan-control-ec", "set", "255"])
         set_state("full")
 
     apply_state()

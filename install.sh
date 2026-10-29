@@ -71,27 +71,8 @@ sudo tee "$POLICY_FILE" > /dev/null <<'EOF'
     "Cookies": {
       "Behavior": "partition-foreign"
     },
-    "GenerativeAI": {
-      "Chatbot": false,
-    },
     "Preferences": {
-      "datareporting.healthreport.uploadEnabled": {
-        "Value": false,
-        "Status": "locked"
-      },
       "datareporting.policy.dataSubmissionEnabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-      "datareporting.usage.uploadEnabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-      "toolkit.telemetry.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-      "toolkit.telemetry.unified": {
         "Value": false,
         "Status": "locked"
       },
@@ -102,17 +83,8 @@ sudo tee "$POLICY_FILE" > /dev/null <<'EOF'
       "browser.newtabpage.activity-stream.telemetry": {
         "Value": false,
         "Status": "locked"
-      },
-      "privacy.globalprivacycontrol.enabled": {
-        "Value": true,
-        "Status": "locked"
-      },
-      "privacy.globalprivacycontrol.functionality.enabled": {
-        "Value": true,
-        "Status": "locked"
       }
     },
-
     "EnableTrackingProtection": {
       "Value": true,
       "Cryptomining": true,
@@ -121,12 +93,11 @@ sudo tee "$POLICY_FILE" > /dev/null <<'EOF'
       "SuspectedFingerprinting": true,
       "Category": "strict"
     },
-
     "Extensions": {
       "Install": [
-        "https://addons.mozilla.org/firefox/downloads/latest/user-agent-string-switcher/latest.xpi",
-        "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi",
-        "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi",
+        "https://addons.mozilla.org/firefox/downloads/latest/{a6c4a591-f1b2-4f03-b3ff-767e5bedf4e7}/latest.xpi",
+        "https://addons.mozilla.org/firefox/downloads/latest/uBlock0@raymondhill.net/latest.xpi",
+        "https://addons.mozilla.org/firefox/downloads/latest/{446900e4-71c2-419f-a6a7-df9c091e268b}/latest.xpi",
         "https://addons.mozilla.org/firefox/downloads/latest/reddituntranslate/latest.xpi",
         "https://addons.mozilla.org/firefox/downloads/latest/plasma-integration/latest.xpi",
         "https://addons.mozilla.org/firefox/downloads/latest/clear-browsing-data/latest.xpi"
